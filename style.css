@@ -1,0 +1,27 @@
+:root{--teal:#0f766e;--dark:#0b2e2b;--slate:#475569;--bg:#f1f5f4}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",Tahoma,sans-serif;background:var(--bg);color:#1e293b;line-height:1.5}
+.top{text-align:center;padding:70px 6% 30px}
+.top h1{font-size:clamp(1.8rem,4.5vw,2.8rem);color:var(--dark)}
+.top p{color:var(--slate);margin-top:10px}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;max-width:1000px;margin:30px auto 60px;padding:0 6%;align-items:stretch}
+.plan{background:#fff;border:1px solid #d5dedc;border-radius:12px;padding:32px 26px;display:flex;flex-direction:column;position:relative}
+.plan h2{font-size:1.3rem;color:var(--dark)}
+.price{font-size:2.6rem;font-weight:700;margin:10px 0 4px;color:var(--teal)}
+.price small{font-size:1rem;font-weight:400;color:var(--slate)}
+.for{color:var(--slate);margin-bottom:20px}
+.plan ul{list-style:none;margin-bottom:28px;flex:1}
+.plan li{padding:8px 0 8px 28px;position:relative;border-top:1px solid #edf1f0}
+.plan li::before{content:"";position:absolute;left:4px;top:13px;width:6px;height:11px;border:solid var(--teal);border-width:0 3px 3px 0;transform:rotate(45deg)}
+.featured{background:var(--dark);color:#fff;border-color:var(--dark);transform:translateY(-12px);box-shadow:0 14px 30px rgba(11,46,43,.3)}
+.featured h2,.featured .price{color:#fff}
+.featured .price small,.featured .for{color:#a7c4c0}
+.featured li{border-color:#1d4a46}
+.featured li::before{border-color:#5eead4}
+.badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#5eead4;color:var(--dark);font-size:.8rem;font-weight:700;padding:4px 14px;border-radius:20px}
+.btn{display:block;text-align:center;padding:12px;border-radius:8px;text-decoration:none;font-weight:700;background:#5eead4;color:var(--dark)}
+.btn.outline{background:transparent;border:2px solid var(--teal);color:var(--teal)}
+.btn:hover,.btn:focus-visible{filter:brightness(1.1)}
+.btn.outline:hover,.btn.outline:focus-visible{background:var(--teal);color:#fff;filter:none}
+footer{text-align:center;padding:24px;color:var(--slate);font-size:.9rem}
+@media(max-width:700px){.featured{transform:none}}
